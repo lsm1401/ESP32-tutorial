@@ -6,11 +6,8 @@
 #include "tensorflow/lite/schema/schema_generated.h"
 #include "tensorflow/lite/version.h"
 
-// #include <vector>
 
-// using std::vector; using std::pair;
-
-const int kArenaSize = 204320;//110000;
+const int kArenaSize = 205000;
 
 NeuralNetwork::NeuralNetwork()
 {
@@ -63,31 +60,22 @@ NeuralNetwork::NeuralNetwork()
     // https://www.tensorflow.org/lite/microcontrollers/get_started_low_level
     input = interpreter->input(0);
     
-    
     output = interpreter->output(0);
 }
 
+//Input type of Model 
 float *NeuralNetwork::getInputBuffer()
 {
     return input->data.f;
 }
 
-
+//Output type of Model 
 float NeuralNetwork::predict()
 {
     interpreter->Invoke();
     float pred1 = output ->data.f[0]; 
     // float pred2 = output ->data.f[1]; 
     // float pred = pred1+pred2;
-    // if (pred1 > pred2){
-
-    // }
     return pred1;
-}
-
-
-float *NeuralNetwork::getInput()
-{
-    return input->data.f; 
 }
 
