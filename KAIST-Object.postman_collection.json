@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "5515f6e1-18b0-492f-b1a0-3f2348dea595",
+		"name": "KAIST-Object",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://kaistdevicecap-sap-trainer03-sumin.fe56704.kyma.ondemand.com/service/kaistdevice/Objectdetection",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Length",
+						"value": "JSON.stringfy(jsonObject).length",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Host",
+						"value": "kaistdevicecap-sap-trainer03-sumin.fe56704.kyma.ondemand.com",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"object_detected\":\"Lemon\",\"probability\":0.808,\"device\":\"sap-trainer03\"}"
+				},
+				"url": {
+					"raw": "https://kaistdevicecap-sap-trainer03-sumin.fe56704.kyma.ondemand.com/service/kaistdevice/Objectdetection",
+					"protocol": "https",
+					"host": [
+						"kaistdevicecap-sap-trainer03-sumin",
+						"fe56704",
+						"kyma",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"service",
+						"kaistdevice",
+						"Objectdetection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://kaistdevicecap-sap-trainer03-sumin.fe56704.kyma.ondemand.com/service/kaistdevice/Objectdetection Copy",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Length",
+						"value": "JSON.stringfy(jsonObject).length",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Host",
+						"value": "kaistdevicecap-sap-trainer03-sumin.fe56704.kyma.ondemand.com",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://kaistdevicecap-sap-trainer03-sumin.fe56704.kyma.ondemand.com/service/kaistdevice/Objectdetection",
+					"protocol": "https",
+					"host": [
+						"kaistdevicecap-sap-trainer03-sumin",
+						"fe56704",
+						"kyma",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"service",
+						"kaistdevice",
+						"Objectdetection"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
